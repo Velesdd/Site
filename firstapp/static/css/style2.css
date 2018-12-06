@@ -1,0 +1,34 @@
+body{background:#DCDCDC;
+				margin:0;}
+
+		ul {
+				list-style: none;
+				margin: 0;
+				padding-left:0;
+				overflow: hidden;
+			}
+		a {
+				text-decoration:none;
+				display: block;
+				font-size: 24px;
+				font-family: 'Fredoka One', cursive;
+				color: #696969;
+			}
+		li {float: left;
+				margin-right: 15px;
+				margin-left: 10px;
+				margin-top: 15px;}
+		.m {
+				background: #FFFAFA;
+				height: 350px;
+				margin: 30px 10%;
+				width: 80%;
+				box-shadow:0 0 3px rgba(0,0,0,0.5);
+				text-align: center;
+			 }
+			 .active{
+			 	text-decoration: underline;
+			 }
+			  li:hover {
+			 	text-decoration:  underline;
+			 }

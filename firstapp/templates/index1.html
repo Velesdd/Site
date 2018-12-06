@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n my_filters %}
+
+    {% block script %}
+
+		<script src="{% static 'js/jquery-3.3.1.min.js' %}" type="application/javascript"></script>
+		<script src="{% static 'js/Main.js' %}" type="application/javascript"></script>
+	{% endblock %}
+
+	{% block contentt %}
+		<style>
+			.slider-nav button.slider-prev  {
+
+			float: left;
+			margin-left:5em;
+			margin-top:-35px;
+			}
+			.slider-nav button.slider-next  {
+			visibility: visible;
+			margin-top: -35px;
+			#img_top {
+			margin-top:60px;
+			}
+		</style>
+
+
+	{% endblock %}
+
+{% block content %}
+    {% show_navbar 'main' %}
+	<p id="back-top">
+    			<a href="#top"><span></span><img src="{% static 'my_app/s.png' %}" id="img_top" height="40px" width="40px"></a>
+	</p>
+	<p id="window1"><span></span>Написать нам</p>
+	<div class="l">
+	 			<form>
+            		<fieldset>
+              	 		<div id="h"><legend>Связь с нами</legend></div>
+               			<p id="close"><span></span><img src="{% static 'my_app/512.png' %}" height="25px" width="25px"></p>
+      					<div id="ll"><input type="text" id="name" placeholder="Имя"> </div>
+                		<input type="tel" id="mail"placeholder="Электронная почта"><br><br>
+               			<input type="text" id="text" size="100" placeholder="Сообщение"></p>
+                		<div id="t"><input type="button" value="Отправить"></div>
+            		</fieldset>
+        		</form>
+	</div>
+	<div class="main">
+		<div class="m0">
+						<div class="slider-wrapper" >
+							<img src="{% static 'my_app/1.png' %}" class="slide"  width=100% height=100%>
+						</div>
+						<div class="slider-nav">
+							<button type="button" class="slider-next"></button>
+							<button type="button" class="slider-prev"></button>
+						</div>
+		</div>
+		<div class="mm">
+						<h3>Рассчитать стоимость манги</h3>
+						<form>
+							<p><select name="select">
+								<option selected value="s1" id="1">Манга 1</option>
+								<option value="s2" id="1">Манга 2</option>
+								<option value="s3" id="1">Манга 3</option>
+								<option value="s4" id="1">Манга 4</option>
+								<p><input type="number" size="3" name="num" min="1" max="10" value="1" id="num"></p>
+								</select>
+							</p>
+							<input type="button" value="Отправить" id="im">
+							<form>
+								<h3>Список:</h3>
+								<p><input id="im2" style="width: 70%; height: 25%;"></p>
+								<h3>Сумма:</h3>
+								<p><input id="im3" style="width: 20%; height: 15%;"></p>
+							</form>
+						</form>
+		</div>
+
+		<div class="m1">
+							<div id="m"><h1>Лучшая манга</h1></div>
+							<div class="box"><img src="{% static 'my_app/d.png' %}" width=20% height=82%>	<hr size=1px width=100% align="left" color=gray></div>
+							<div class="box"><img src="{% static 'my_app/d.png' %}" width=20% height=82%>	<hr size=1px width=100% align="left" color=gray></div>
+							<div class="box"><img src="{% static 'my_app/d.png' %}" width=20% height=82%><hr size=1px width=100% align="left" color=gray></div>
+							<div class="box"><img src="{% static 'my_app/d.png' %}" width=20% height=82%></div>
+		</div>
+	</div>
+
+
+{% endblock %}

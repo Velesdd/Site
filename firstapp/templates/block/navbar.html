@@ -1,0 +1,20 @@
+{% load i18n %}
+<header>
+		<ul class ="menu">
+			<li class="nav-item">
+                <a class="nav-link {% if section == 'main' %} active{% endif %}"  href="{% url 'main' %}">
+                    Главная
+                </a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link {% if section == 'catalog' %} active{% endif %}"  href="{% url 'catalog' %}">
+                    Каталог
+                </a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link {% if section == 'c' %} active{% endif %}"  href="">
+                    Форум
+                </a>
+            </li>
+        </ul>
+</header>
